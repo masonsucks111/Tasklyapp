@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskly - Advanced</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Taskly - Advanced</h1>
+            <button id="theme-toggle">Toggle Dark Mode</button>
+            <button id="logout-btn" onclick="logout()">Logout</button>
+        </header>
+
+        <!-- Sign Up / Log In Form -->
+        <section id="auth-section">
+            <h2>Sign Up / Log In</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="signUp()">Sign Up</button>
+            <button onclick="logIn()">Log In</button>
+            <p id="auth-message"></p>
+        </section>
+
+        <!-- Task Form (Hidden until logged in) -->
+        <section id="task-form-section" style="display: none;">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <select id="task-category">
+                <option value="">Select Category</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Custom">Custom</option>
+            </select>
+            <input type="date" id="task-due-date">
+            <select id="task-priority">
+                <option value="">Select Priority</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <select id="task-progress">
+                <option value="Not Started">Not Started</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <!-- Filters Section (Hidden until logged in) -->
+        <section id="filters" style="display: none;">
+            <h2>Filters</h2>
+            <select id="filter-category" onchange="filterTasks()">
+                <option value="">All Categories</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Custom">Custom</option>
+            </select>
+            <select id="filter-priority" onchange="filterTasks()">
+                <option value="">All Priorities</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <select id="filter-progress" onchange="filterTasks()">
+                <option value="">All Progress</option>
+                <option value="Not Started">Not Started</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </section>
+
+        <!-- Task List (Hidden until logged in) -->
+        <section id="task-list-section" style="display: none;">
+            <h2>Your Tasks</h2>
+            <ul id="task-list"></ul>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

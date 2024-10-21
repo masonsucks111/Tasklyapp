@@ -1,0 +1,94 @@
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f4f4f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#theme-toggle {
+    margin-bottom: 10px;
+}
+
+#logout-btn {
+    float: right;
+    display: none; /* Hidden until logged in */
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .app-container {
+    background-color: #444;
+}
+
+body.dark li {
+    background-color: #555;
+    border-color: #666;
+}
+
+body.dark button {
+    background-color: #4CAF50;
+}
+
+body.dark input, body.dark select {
+    background-color: #666;
+    color: white;
+    border-color: #888;
+}
