@@ -22,7 +22,7 @@ body {
 
 h1, h2 {
     text-align: center;
-    color: #4CAF50;
+    color: #07f5e3;
 }
 
 input, select, button {
@@ -34,7 +34,7 @@ input, select, button {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #07f5e3;
     color: white;
     font-weight: bold;
     cursor: pointer;
